@@ -1,83 +1,35 @@
-# Assessment
-
-## 📝 Objective
-
-The goal of this assessment is to evaluate your ability to:
-
-- Work with Node.js backend code.
-- Interact with blockchain smart contracts.
-
----
-
-## 📌 Task Instructions
-
-1. **Create a New API Endpoint**
-
-   - Add a new API endpoint in `index.js` named:
-
-     ```
-     [Name]ApiTest
-     ```
-
-2. **Smart Contract Interaction**
-
-   - Select any **pre-deployed** or **public smart contract** (mainnet or testnet).
-   
-   - Fetch some data (any useful information such as balance, contract state, or public variables).
-   
-   - The logic should fetch data through your new API endpoint.
+ERC-20 Token Information API
+This is a simple Node.js Express API that connects to the Ethereum Sepolia testnet to fetch and display information about an ERC-20 token. The current implementation fetches data for the DAI token.
 
 
-3. **Output**
 
-   - The result should be printed to the console.
-   - No need for complex UI or data persistence 
-   - just demonstrate that the data was fetched successfully.
 
----
+Install dependencies:
+This project uses express, ethers, and dotenv. You can install them with the following command:
 
-## 📤 Submission
+pnpm install express ethers dotenv
 
-Once completed, submit one of the following:
 
-- **short video** recording your work.
-- **screenshots** showing the API call and console result.
-- **Github Link** where your assessment result were pushed.
 
----
+Usage
+Start the server:
+From your terminal, run the following command in the project's root directory:
 
-## ⏰ Time Expectation
+node index.js
 
-- Estimated time to complete: **30–60 minutes**.
+The server will start on http://localhost:4001.
 
----
+Access the API endpoint:
+Open your web browser or use a tool like Postman or curl to access the endpoint:
 
-## ⚙️ Notes
+http://localhost:4001/ApiTest
 
-You may use any blockchain provider such as:
+You should see a JSON response with the token's name, symbol, decimals, and total supply.
 
-  - **ethers.js**
-  - **web3.js**
-  - Any public RPC provider (Infura, Alchemy, QuickNode, etc.)
-  
-Keep your code **clean, simple, and easy to review**.
+Tech Stack
+Node.js: JavaScript runtime environment
 
-Handle errors gracefully where possible.
+Express: Web application framework for Node.js
 
----
-## 🚀 Quick Start Guide
+ethers.js: Library for interacting with the Ethereum blockchain
 
-To run the project locally:
-
-```bash
-# Clone the repository (if provided)
-git clone [repo-url]
-
-# Move into the project directory
-cd [project-folder]
-
-# Install dependencies
-npm install
-
-# Start the server
-npm start

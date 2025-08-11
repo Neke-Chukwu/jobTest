@@ -6,13 +6,13 @@ const ERC20_ABI = [
 ];
 require('dotenv').config();
 
+
+
 // Check if the RPC URL is available
 const rpcUrl ="https://eth-sepolia.g.alchemy.com/v2/4oRl90WKrEONtjQQhYIXs";
 if (!rpcUrl) {
   throw new Error("ALCHEMY_RPC_URL is not defined in your .env file.");
 }
-
-
 
 
 // The DAI contract address on the Sepolia testnet
