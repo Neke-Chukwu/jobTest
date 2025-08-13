@@ -16,6 +16,7 @@ if (!rpcUrl) {
 
 
 // The DAI contract address on the Sepolia testnet
+// the current contract address i used here is for WETH, you can change it to any contract address of your preference and restart server.
 const DAI_CONTRACT_ADDRESS = '0xf531b8f309be94191af87605cfbf600d71c2cfe0';
 
 
