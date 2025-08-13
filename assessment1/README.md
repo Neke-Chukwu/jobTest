@@ -1,15 +1,10 @@
 ERC-20 Token Information API
-This is a simple Node.js Express API that connects to the Ethereum Sepolia testnet to fetch and display information about an ERC-20 token. The current implementation fetches data for the DAI token.
+This is a simple Node.js Express API that connects to the Ethereum Sepolia testnet to fetch and display information about an ERC-20 token. The current implementation fetches data for the WETH token, but can fetch any token if the contract address is changed.
 
-video: https://drive.google.com/file/d/18muVdIunohV0GKUOpXVL0cCO5BdJJx7H/view?usp=drivesdk
-
-
-Install dependencies:
+Install dependencies: (at "aasessment1" level)
 This project uses express, ethers, and dotenv. You can install them with the following command:
 
 pnpm install express ethers dotenv
-
-
 
 Usage
 Start the server:
@@ -20,7 +15,9 @@ node index.js
 The server will start on http://localhost:4001.
 
 Access the API endpoint:
-Open your web browser or use a tool like Postman or curl to access the endpoint:
+Open your web browser and visit: http://localhost:4001.
+
+Or use a tool like Postman or curl to access the endpoint:
 
 http://localhost:4001/ApiTest
 
@@ -32,4 +29,3 @@ Node.js: JavaScript runtime environment
 Express: Web application framework for Node.js
 
 ethers.js: Library for interacting with the Ethereum blockchain
-

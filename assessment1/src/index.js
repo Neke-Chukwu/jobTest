@@ -18,21 +18,34 @@ app.use(morgan('dev'));
 // Routes
 app.use('/api/items', itemsRouter);
 app.use('/api/stats', statsRouter);
-//!
+
+//@Neke-Chukwu "Added apiTestRouter for testing purposes"
 app.use('/ApiTest', apiTestRouter);
+
+
 
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+}
+
+//@Neke-Chukwu Serve static files in development and run "index.html"
+if (process.env.NODE_ENV !== 'production') {
+    app.use(express.static(path.join(__dirname)));
+    app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname, 'index.html'));
     });
 }
 
+
 const startServer = async () => {
     // await initruntimeConfig(); 
+
     const server = app.listen(PORT, () => {
-        console.log(`Backend running on http://localhost:${PORT}`);
+        console.log(`Backend running on http://localhost:${PORT}\n`);
+
+        //@Neke-Chukwu "Added console log for testing with browser"
+        console.log(`Click Here Test App From Browser: \x1b[34mhttp://localhost:${PORT}\x1b[0m`);
     });
 
     const shutdownHandler = (signal) => {

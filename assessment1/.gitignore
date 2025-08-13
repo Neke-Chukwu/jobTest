@@ -1,0 +1,5 @@
+node_modules
+./dist
+.env
+./node_modules
+../assessment1/node_modules
